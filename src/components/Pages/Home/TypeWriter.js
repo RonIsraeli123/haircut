@@ -1,7 +1,7 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
-import { TYPEING } from '../../config/homePage/typeWriter';
+import { TYPEING } from '../../../config/Pages/homePage/typeWriter';
 
 function TypeWriter() {
   return (

@@ -21,13 +21,13 @@ function Footer() {
             </a>
           </h3>
         </Col>
+        <Col md='4' className='footer-body'>
+          <SocialMedia />
+        </Col>
         <Col md='4' className='footer-copywright'>
           <h3>
             {COPYRIGHT} © {year}{' '}
           </h3>
-        </Col>
-        <Col md='4' className='footer-body'>
-          <SocialMedia />
         </Col>
       </Row>
     </Container>

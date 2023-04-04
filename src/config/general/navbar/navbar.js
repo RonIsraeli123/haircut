@@ -1,6 +1,6 @@
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
 import { HiScissors, HiClipboardList } from 'react-icons/hi';
-import { BUSINESS_NAME } from '../../aboutPage/about';
+import { BUSINESS_NAME } from '../../Pages/aboutPage/about';
 
 export const BRAND = BUSINESS_NAME;
 

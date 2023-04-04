@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Aboutcard from './AboutCard';
-import Man from '../../config/Assets/man.jpeg';
-import { HEADER } from '../../config/aboutPage/about';
+import Man from '../../../config/Assets/man.jpeg';
+import { HEADER } from '../../../config/Pages/aboutPage/about';
 
 function About() {
   return (

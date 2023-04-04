@@ -2,11 +2,14 @@ import React from 'react';
 import { MdEmail } from 'react-icons/md';
 import { ImWhatsapp } from 'react-icons/im';
 import { BsFillTelephoneFill } from 'react-icons/bs';
-import { MAIL_ADDRESS, PHONE_NUMBER } from '../../config/homePage/contact';
+import {
+  MAIL_ADDRESS,
+  PHONE_NUMBER,
+} from '../../config/Pages/homePage/contact';
 
 function SocialMedia() {
   return (
-    <div>
+    <div className='socialMedia'>
       <ul className='home-about-social-links'>
         <li className='social-icons'>
           <a

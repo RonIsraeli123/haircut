@@ -1,21 +1,26 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import myImg from '../../config/Assets/home.jpg';
-import SocialMedia from '../General/SocialMedia';
+import SocialMedia from '../../General/SocialMedia';
 import TypeWriter from './TypeWriter';
 
-import { TITLE, SUMTITLE, PARAGRAPH } from '../../config/homePage/main';
+import myImg from '../../../config/Assets/home.jpg';
+
+import {
+  TITLE,
+  SUMTITLE,
+  PARAGRAPH,
+} from '../../../config/Pages/homePage/main';
 
 import {
   CONTACT_HEADER,
   CONTACT_PARAGRAPH,
   CONTACT_NOTE,
-} from '../../config/homePage/contact';
+} from '../../../config/Pages/homePage/contact';
 
 function Home() {
   return (
     <section>
-      <Container fluid className='home-section' id='home'>
+      <Container className='home-section' id='home'>
         <Container className='home-content'>
           <Row>
             <Col md={6} className='home-header'>

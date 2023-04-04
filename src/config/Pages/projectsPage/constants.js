@@ -1,6 +1,6 @@
-import IMAGE0 from '../../config/Assets/Projects/image0.jpg';
-import IMAGE1 from '../../config/Assets/Projects/image1.jpg';
-import IMAGE2 from '../../config/Assets/Projects/image2.jpg';
+import IMAGE0 from '../../../config/Assets/Projects/image0.jpg';
+import IMAGE1 from '../../../config/Assets/Projects/image1.jpg';
+import IMAGE2 from '../../../config/Assets/Projects/image2.jpg';
 
 export const PROJECTS = [
   {

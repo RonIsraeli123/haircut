@@ -1,4 +1,4 @@
-import { BUSINESS_NAME } from '../../aboutPage/about';
+import { BUSINESS_NAME } from '../../Pages/aboutPage/about';
 
 export const WEB_BUILDER_MAIL = 'seniordev1000@gmail.com';
 

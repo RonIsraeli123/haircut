@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import { PARAGRAPH } from '../../config/aboutPage/about';
+import { PARAGRAPH } from '../../../config/Pages/aboutPage/about';
 
 function AboutCard() {
   return (
