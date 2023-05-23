@@ -1,17 +1,19 @@
 import React from 'react';
-import Navbar from './components/General/Navbar';
-import Footer from './components/General/Footer';
-import Home from './components/Pages/Home/Home';
-import About from './components/Pages/About/About';
-import Projects from './components/Pages/Projects/Projects';
-import Login from './components/Pages/Login/Login';
-import Appointment from './components/Pages/Appointment/Appointment';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import { Navbar, Footer, ScrollToTop } from './components/General';
+import {
+  Home,
+  About,
+  Projects,
+  Login,
+  Appointment,
+  Verify,
+} from './components/Pages';
+
 import './style.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import ScrollToTop from './components/General/ScrollToTop';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path='/project' component={Projects} />
           <Route path='/login' component={Login} />
           <Route path='/appointment' component={Appointment} />
+          <Route path='/verify' component={Verify} />
         </Switch>
         <Footer />
       </div>

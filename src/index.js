@@ -18,12 +18,12 @@ const theme = createTheme({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
+  <div>
     <CacheProvider value={cacheRtl}>
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
     </CacheProvider>{' '}
-  </React.StrictMode>,
+  </div>,
   document.getElementById('root')
 );
