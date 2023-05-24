@@ -1,11 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
@@ -14,10 +10,8 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-import { OPTIONS } from '../../../config/Pages/appointmentPage/appointment';
-
-function ConfirmationDialogRaw(props) {
-  const { onClose, value: valueProp, open, ...other } = props;
+export default function ConfirmationDialogRaw(props) {
+  const { onClose, value: valueProp, open, availableHours, ...other } = props;
   const [value, setValue] = React.useState(valueProp);
   const radioGroupRef = React.useRef(null);
 
@@ -53,7 +47,7 @@ function ConfirmationDialogRaw(props) {
       open={open}
       {...other}
     >
-      <DialogTitle className='center'>תפריט ומחירים</DialogTitle>
+      <DialogTitle className='center'>השעות הפנויות הן -</DialogTitle>
       <DialogContent dividers>
         <RadioGroup
           ref={radioGroupRef}
@@ -62,7 +56,7 @@ function ConfirmationDialogRaw(props) {
           value={value}
           onChange={handleChange}
         >
-          {OPTIONS.map((option) => (
+          {availableHours.map((option) => (
             <FormControlLabel
               value={option}
               key={option}
@@ -76,7 +70,13 @@ function ConfirmationDialogRaw(props) {
         <Button autoFocus onClick={handleCancel}>
           ביטול
         </Button>
-        <Button onClick={handleOk}>אישור</Button>
+        {value ? (
+          <Button onClick={handleOk}>אישור</Button>
+        ) : (
+          <Button disabled onClick={handleOk}>
+            אישור
+          </Button>
+        )}
       </DialogActions>
     </Dialog>
   );
@@ -87,45 +87,3 @@ ConfirmationDialogRaw.propTypes = {
   open: PropTypes.bool.isRequired,
   value: PropTypes.string.isRequired,
 };
-
-export default function ScheduleDialog(props) {
-  const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState('');
-
-  const handleClickListItem = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (newValue) => {
-    setOpen(false);
-
-    if (newValue) {
-      setValue(newValue);
-    }
-  };
-
-  return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      <List component='div' role='group'>
-        <ListItem
-          button
-          divider
-          aria-haspopup='true'
-          onClick={handleClickListItem}
-        >
-          <ListItemText
-            primary={props.availableTor}
-            className='center-column'
-            secondary={value}
-          />
-        </ListItem>
-        <ConfirmationDialogRaw
-          keepMounted
-          open={open}
-          onClose={handleClose}
-          value={value}
-        />
-      </List>
-    </Box>
-  );
-}

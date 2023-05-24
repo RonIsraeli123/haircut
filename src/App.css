@@ -48,3 +48,17 @@
 .allPage{
   height: 87vh;
 }
+.availableBarberTime{
+  padding: 8px;
+  margin-top: 2em;
+  margin: 1em;
+}
+.availableBarbers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 1em;
+  gap: 1em;
+
+}

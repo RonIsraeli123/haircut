@@ -24,7 +24,6 @@ const SignIn = () => {
   const verifyCode = (e) => {
     if (code) {
       history.push('/appointment');
-      //   );
     } else {
       alert("Code isn't valid");
     }
