@@ -30,6 +30,12 @@ const Appointment = () => {
         <Container component='main' maxWidth='xs'>
           {showFinalAppointment ? (
             <div>
+              {chosenBarberDetails['barberName']}
+              {appointmentDetails['chosenDay']}
+              {appointmentDetails['chosenHour']}
+              <Button variant='contained' onClick={(e) => console.log('done!')}>
+                קבע תור
+              </Button>
               <Button
                 variant='contained'
                 onClick={(e) => setShowFinalAppointment(false)}
@@ -59,13 +65,13 @@ const Appointment = () => {
                     >
                       {Object.entries(
                         chosenBarberDetails['barberAvailability']
-                      ).map(([availableDay, availableHours]) => {
+                      ).map(([availableDay, availableHours], index) => {
                         // console.log(availableDay, availableHours);
                         return (
                           <ScheduleDialog
+                            key={index}
                             availableDay={availableDay}
                             availableHours={availableHours}
-                            appointmentDetails={appointmentDetails}
                             setShowFinalAppointment={setShowFinalAppointment}
                             setAppointmentDetails={setAppointmentDetails}
                           />

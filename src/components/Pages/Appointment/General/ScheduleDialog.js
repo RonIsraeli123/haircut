@@ -12,7 +12,6 @@ export default function ScheduleDialog(props) {
     availableDay,
     availableHours,
     setShowFinalAppointment,
-    appointmentDetails,
     setAppointmentDetails,
   } = props;
 
@@ -28,6 +27,13 @@ export default function ScheduleDialog(props) {
 
     if (newValue) {
       setValue(newValue);
+      // insert appointment details to db
+      console.log(availableDay);
+      console.log(newValue);
+      setAppointmentDetails({
+        chosenDay: availableDay,
+        chosenHour: newValue,
+      });
       setShowFinalAppointment(true);
     }
   };
