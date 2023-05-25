@@ -28,7 +28,6 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/appointment' component={Appointment} />
           <Route path='/verify' component={Verify} />
-          <Route path='/barberDetails' component={Verify} />
         </Switch>
         <Footer />
       </div>

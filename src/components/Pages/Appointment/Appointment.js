@@ -3,16 +3,21 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
 
-import BarberCard from '../General/BarberCard';
-import ScheduleDialog from '../General/ScheduleDialog';
+import BarberCard from './General/BarberCard';
+import ScheduleDialog from './General/ScheduleDialog';
 
 import {
   BARBERS_HEADER,
   AVAILABLE_BARBERS,
-} from '../../../../config/Pages/appointmentPage/appointment';
+} from '../../../config/Pages/appointmentPage/appointment';
 
 const Appointment = () => {
+  const [jobType, setJobType] = React.useState('');
   const [showFinalAppointment, setShowFinalAppointment] = useState(false);
   const [appointmentDetails, setAppointmentDetails] = React.useState({
     chosenDay: '',
@@ -24,6 +29,10 @@ const Appointment = () => {
     barberAvailability: {},
   });
 
+  const handleChange = (event) => {
+    setJobType(event.target.value);
+  };
+
   return (
     <div className='allPage'>
       <div className='appointment-section'>
@@ -33,6 +42,20 @@ const Appointment = () => {
               {chosenBarberDetails['barberName']}
               {appointmentDetails['chosenDay']}
               {appointmentDetails['chosenHour']}
+              <FormControl className='formInputSelect'>
+                <InputLabel id='demo-simple-select-label'>בחר טיפול</InputLabel>
+                <Select
+                  labelId='demo-simple-select-label'
+                  id='demo-simple-select'
+                  value={jobType}
+                  onChange={handleChange}
+                >
+                  <MenuItem value={'תספורת + זקן'}>תספורת + זקן</MenuItem>
+                  <MenuItem value={'תספורת בלבד'}>תספורת</MenuItem>
+                  <MenuItem value={'זקן'}> זקן</MenuItem>
+                </Select>
+              </FormControl>
+
               <Button variant='contained' onClick={(e) => console.log('done!')}>
                 קבע תור
               </Button>
