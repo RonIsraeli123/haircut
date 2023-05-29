@@ -14,7 +14,7 @@ function Footer() {
   return (
     <Container fluid className='footer'>
       <Row>
-        <Col md='4' className='footer-copywright'>
+        <Col md='4' className='footer-copyright'>
           <h3>
             <a style={{ color: 'white' }} href={`mailto:${WEB_BUILDER_MAIL}`}>
               {DEVELOP_BY}
@@ -24,7 +24,7 @@ function Footer() {
         <Col md='4' className='footer-body'>
           <SocialMedia />
         </Col>
-        <Col md='4' className='footer-copywright'>
+        <Col md='4' className='footer-copyright'>
           <h3>
             {COPYRIGHT} © {year}{' '}
           </h3>

@@ -37,7 +37,11 @@ const Appointment = () => {
   return (
     <div className='allPage'>
       <div className='appointment-section'>
-        <Container component='main' maxWidth='xs'>
+        <Container
+          className='contentAppointment'
+          component='main'
+          maxWidth='xs'
+        >
           {showFinalAppointment ? (
             <div>
               <div className='torDetails'>
@@ -51,18 +55,16 @@ const Appointment = () => {
                     בחר טיפול
                   </InputLabel>
                   <Select
-                    labelId='demo-simple-select-label'
-                    id='demo-simple-select'
+                    labelId='demo-simple-select-outlined-label'
+                    id='demo-simple-select-outlined'
                     value={jobType}
                     onChange={handleChange}
                   >
-                    {JOB_TYPES.map((jobDetails) => {
+                    {JOB_TYPES.map((jobDetails, index) => {
                       return (
-                        <div>
-                          <MenuItem value={jobDetails['value']}>
-                            {jobDetails['text']}
-                          </MenuItem>
-                        </div>
+                        <MenuItem key={index} value={jobDetails['value']}>
+                          {jobDetails['text']}
+                        </MenuItem>
                       );
                     })}
                   </Select>
@@ -77,7 +79,10 @@ const Appointment = () => {
                 </Button>
                 <Button
                   variant='contained'
-                  onClick={(e) => setShowFinalAppointment(false)}
+                  onClick={(e) => {
+                    setShowFinalAppointment(false);
+                    setJobType('');
+                  }}
                 >
                   בטל
                 </Button>
