@@ -14,6 +14,7 @@ import ScheduleDialog from './General/ScheduleDialog';
 import {
   BARBERS_HEADER,
   AVAILABLE_BARBERS,
+  JOB_TYPES,
 } from '../../../config/Pages/appointmentPage/appointment';
 
 const Appointment = () => {
@@ -39,32 +40,48 @@ const Appointment = () => {
         <Container component='main' maxWidth='xs'>
           {showFinalAppointment ? (
             <div>
-              {chosenBarberDetails['barberName']}
-              {appointmentDetails['chosenDay']}
-              {appointmentDetails['chosenHour']}
-              <FormControl className='formInputSelect'>
-                <InputLabel id='demo-simple-select-label'>בחר טיפול</InputLabel>
-                <Select
-                  labelId='demo-simple-select-label'
-                  id='demo-simple-select'
-                  value={jobType}
-                  onChange={handleChange}
+              <div className='torDetails'>
+                <div>{chosenBarberDetails['barberName']}</div>
+                <div>{appointmentDetails['chosenDay']}</div>
+                <div>{appointmentDetails['chosenHour']}</div>
+              </div>
+              <div className='jobTypeDetails'>
+                <FormControl className='jobTypeInput'>
+                  <InputLabel id='demo-simple-select-label'>
+                    בחר טיפול
+                  </InputLabel>
+                  <Select
+                    labelId='demo-simple-select-label'
+                    id='demo-simple-select'
+                    value={jobType}
+                    onChange={handleChange}
+                  >
+                    {JOB_TYPES.map((jobDetails) => {
+                      return (
+                        <div>
+                          <MenuItem value={jobDetails['value']}>
+                            {jobDetails['text']}
+                          </MenuItem>
+                        </div>
+                      );
+                    })}
+                  </Select>
+                </FormControl>
+              </div>
+              <div className='approveCancelAppointment'>
+                <Button
+                  variant='contained'
+                  onClick={(e) => console.log('done!')}
                 >
-                  <MenuItem value={'תספורת + זקן'}>תספורת + זקן</MenuItem>
-                  <MenuItem value={'תספורת בלבד'}>תספורת</MenuItem>
-                  <MenuItem value={'זקן'}> זקן</MenuItem>
-                </Select>
-              </FormControl>
-
-              <Button variant='contained' onClick={(e) => console.log('done!')}>
-                קבע תור
-              </Button>
-              <Button
-                variant='contained'
-                onClick={(e) => setShowFinalAppointment(false)}
-              >
-                בטל
-              </Button>
+                  קבע תור
+                </Button>
+                <Button
+                  variant='contained'
+                  onClick={(e) => setShowFinalAppointment(false)}
+                >
+                  בטל
+                </Button>
+              </div>
             </div>
           ) : (
             <div>

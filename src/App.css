@@ -62,6 +62,24 @@
   gap: 1em;
 
 }
-.formInputSelect{
-  min-width: 2em,
+.torDetails{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1em;
+}
+.jobTypeDetails{
+  margin: 1em;
+}
+.jobTypeInput{
+  min-width: 10em !important
+}
+.approveCancelAppointment{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 1em;
+  gap: 1em;
 }

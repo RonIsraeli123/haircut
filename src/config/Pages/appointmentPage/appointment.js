@@ -29,3 +29,9 @@ export const AVAILABLE_BARBERS = [
     },
   },
 ];
+
+export const JOB_TYPES = [
+  { text: 'תספורת + זקן', value: 'haircutBeard' },
+  { text: 'תספורת', value: 'haircutOnly' },
+  { text: 'זקן', value: 'beardOnly' },
+];
