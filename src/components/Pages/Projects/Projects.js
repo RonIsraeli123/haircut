@@ -5,6 +5,8 @@ import { PROJECTS } from '../../../config/Pages/projectsPage/constants';
 
 import { TITLE } from '../../../config/Pages/projectsPage/project';
 
+// import '../../../style/mainComponents/projects.css';
+
 function Projects() {
   return (
     <Container fluid className='project-section'>

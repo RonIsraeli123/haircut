@@ -17,6 +17,8 @@ import {
   CONTACT_NOTE,
 } from '../../../config/Pages/homePage/contact';
 
+// import '../../../style/mainComponents/home.css';
+
 function Home() {
   return (
     <section>

@@ -22,17 +22,12 @@ function BarberCard(props) {
   return (
     <div>
       <Card
-        className='project-card-view'
+        className='barber-card-view'
         name={barberName}
         onClick={handleCardClick}
       >
         <Card.Title style={{ fontWeight: 'bold' }}>{barberName}</Card.Title>
-        <Card.Img
-          variant='top'
-          style={{ height: '20em' }}
-          src={barberImage}
-          alt='card-img'
-        />
+        <Card.Img variant='top' src={barberImage} alt='card-img' />
         <Card.Body>
           <Card.Text style={{ textAlign: 'justify' }}>
             {barberDescription}

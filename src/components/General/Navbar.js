@@ -16,6 +16,8 @@ import {
   APPOINTMENT_LOGO,
 } from '../../config/general/navbar/navbar';
 
+// import '../../style/generalComponents/navbar.css';
+
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);

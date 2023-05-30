@@ -8,6 +8,8 @@ import {
   COPYRIGHT,
 } from '../../config/general/footer/footer';
 
+// import '../../style/generalComponents/footer.css';
+
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();

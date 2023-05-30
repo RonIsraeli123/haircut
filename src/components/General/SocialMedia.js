@@ -7,6 +7,8 @@ import {
   PHONE_NUMBER,
 } from '../../config/Pages/homePage/contact';
 
+// import '../../style/generalComponents/socialMedia.css';
+
 function SocialMedia() {
   return (
     <div className='socialMedia'>

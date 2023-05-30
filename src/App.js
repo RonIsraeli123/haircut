@@ -11,8 +11,8 @@ import {
   Verify,
 } from './components/Pages';
 
-import './style.css';
-import './App.css';
+import './style/App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

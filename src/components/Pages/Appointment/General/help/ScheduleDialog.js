@@ -5,7 +5,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 
-import ConfirmationDialogRaw from '../General/ConfirmationDialogRaw';
+import ConfirmationDialogRaw from './ConfirmationDialogRaw';
 
 export default function ScheduleDialog(props) {
   const {

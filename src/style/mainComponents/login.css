@@ -1,0 +1,27 @@
+.login-section {
+    position: relative !important;
+    padding-top: 100px !important;
+    padding-bottom: 30px !important;
+    background-image: var(--section-background-color) !important;
+    color: #414141 !important;
+  }
+  
+  .appointment-section {
+    position: relative !important;
+    padding-top: 100px !important;
+    padding-bottom: 30px !important;
+    background-image: var(--section-background-color) !important;
+    color: #414141 !important;
+  }
+  
+  .center{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+  }
+  .center-column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
