@@ -591,6 +591,7 @@ html {
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: #414141 !important;
+  margin-bottom: 1em;
 }
 
 .tech-icons {
@@ -863,6 +864,7 @@ html {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
+  margin-bottom: 0.8em;
 }
 
 .appointmentCard{
