@@ -29,11 +29,9 @@ const FinalAppointmentDetails = (props) => {
 
   return (
     <div className='approvementPage'>
-      <div className='torDetails'>
-        <div>{props.barberName}</div>
-        <div>{props.chosenDay}</div>
-        <div>{props.chosenHour}</div>
-      </div>
+      <p className='torDetails'>
+        {props.barberName} - {props.chosenDay} - {props.chosenHour}
+      </p>
       <div className='jobTypeDetails'>
         <FormControl className='jobTypeInput'>
           <InputLabel id='demo-simple-select-label'>בחר טיפול</InputLabel>

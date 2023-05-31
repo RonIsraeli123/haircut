@@ -8,7 +8,9 @@ import ScheduleDialog from './ScheduleDialog';
 const BarberAvailabilityTime = (props) => {
   return (
     <div>
-      {props.chosenBarberDetails['barberName']}
+      <div className='barberAvailabilityHeader'>
+        {props.chosenBarberDetails['barberName']}
+      </div>
       <Box
         sx={{
           display: 'flex',
