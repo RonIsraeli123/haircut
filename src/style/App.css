@@ -902,11 +902,19 @@ html {
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
 }
+.barber-card-view img {
+min-width: 3em;
+}
 .barber-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px #343e47 !important;
 }
+
+.muirtl-nzinn5-MuiContainer-root{
+max-width: 45em !important;
+}
+
 /* Approvement */
 .approvementPage{
   height: 62vh;

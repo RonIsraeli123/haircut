@@ -8,7 +8,7 @@ import { HEADER } from '../../../config/Pages/aboutPage/about';
 
 function About() {
   return (
-    <Container fluid className='about-section allPage'>
+    <Container fluid className='about-section'>
       <Container>
         <Row style={{ justifyContent: 'center', padding: '10px' }}>
           <Col
