@@ -4,8 +4,6 @@ import Container from '@mui/material/Container';
 import FinalAppointmentDetails from './General/FinalAppointmentDetails';
 import ChooseBarber from './General/ChooseBarber';
 
-// import '../../../style/mainComponents/appointment.css';
-
 const Appointment = () => {
   const [showFinalAppointment, setShowFinalAppointment] = useState(false);
   const [appointmentDetails, setAppointmentDetails] = React.useState({

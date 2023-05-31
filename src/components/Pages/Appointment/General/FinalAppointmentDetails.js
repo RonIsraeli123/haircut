@@ -8,6 +8,9 @@ import Button from '@mui/material/Button';
 
 import { JOB_TYPES } from '../../../../config/Pages/appointmentPage/appointment';
 
+const getAppointmentButtonText = 'קבע תור';
+const cancelButtonText = 'בטל';
+
 const FinalAppointmentDetails = (props) => {
   const [jobType, setJobType] = React.useState('');
 
@@ -53,7 +56,7 @@ const FinalAppointmentDetails = (props) => {
       </div>
       <div className='approveCancelAppointment'>
         <Button variant='contained' onClick={(e) => submitTor(e)}>
-          קבע תור
+          {getAppointmentButtonText}
         </Button>
         <Button
           variant='contained'
@@ -62,7 +65,7 @@ const FinalAppointmentDetails = (props) => {
             setJobType('');
           }}
         >
-          בטל
+          {cancelButtonText}
         </Button>
       </div>
     </div>

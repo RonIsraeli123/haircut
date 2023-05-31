@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 
 import ScheduleDialog from './ScheduleDialog';
 
+const backButtonText = 'חזור';
+
 const BarberAvailabilityTime = (props) => {
   return (
     <div>
@@ -38,7 +40,7 @@ const BarberAvailabilityTime = (props) => {
           variant='contained'
           onClick={(e) => props.setShowAvailableTime(false)}
         >
-          חזור
+          {backButtonText}
         </Button>
       </Box>
     </div>

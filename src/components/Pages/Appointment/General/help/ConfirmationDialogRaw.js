@@ -10,7 +10,12 @@ import RadioGroup from '@mui/material/RadioGroup';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-export default function ConfirmationDialogRaw(props) {
+import { AVAILABLE_TIME_HEADER } from '../../../../../config/Pages/appointmentPage/appointment';
+
+const cancelButtonText = 'ביטול';
+const approveButtonText = 'אישור';
+
+const ConfirmationDialogRaw = (props) => {
   const { onClose, value: valueProp, open, availableHours, ...other } = props;
   const [value, setValue] = React.useState(valueProp);
   const radioGroupRef = React.useRef(null);
@@ -47,7 +52,7 @@ export default function ConfirmationDialogRaw(props) {
       open={open}
       {...other}
     >
-      <DialogTitle className='center'>השעות הפנויות הן -</DialogTitle>
+      <DialogTitle className='center'>{AVAILABLE_TIME_HEADER}</DialogTitle>
       <DialogContent dividers>
         <RadioGroup
           ref={radioGroupRef}
@@ -68,22 +73,23 @@ export default function ConfirmationDialogRaw(props) {
       </DialogContent>
       <DialogActions>
         <Button autoFocus onClick={handleCancel}>
-          ביטול
+          {cancelButtonText}
         </Button>
         {value ? (
-          <Button onClick={handleOk}>אישור</Button>
+          <Button onClick={handleOk}>{approveButtonText}</Button>
         ) : (
           <Button disabled onClick={handleOk}>
-            אישור
+            {approveButtonText}
           </Button>
         )}
       </DialogActions>
     </Dialog>
   );
-}
+};
 
 ConfirmationDialogRaw.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
   value: PropTypes.string.isRequired,
 };
+export default ConfirmationDialogRaw;

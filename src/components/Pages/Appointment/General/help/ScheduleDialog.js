@@ -7,7 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 
 import ConfirmationDialogRaw from './ConfirmationDialogRaw';
 
-export default function ScheduleDialog(props) {
+const ScheduleDialog = (props) => {
   const {
     availableDay,
     availableHours,
@@ -64,4 +64,5 @@ export default function ScheduleDialog(props) {
       </Box>
     </div>
   );
-}
+};
+export default ScheduleDialog;

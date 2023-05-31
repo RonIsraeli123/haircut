@@ -4,8 +4,6 @@ import Aboutcard from './AboutCard';
 import Man from '../../../config/Assets/man.jpeg';
 import { HEADER } from '../../../config/Pages/aboutPage/about';
 
-// import '../../../style/mainComponents/about.css';
-
 function About() {
   return (
     <Container fluid className='about-section'>

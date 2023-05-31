@@ -30,6 +30,8 @@ export const AVAILABLE_BARBERS = [
   },
 ];
 
+export const AVAILABLE_TIME_HEADER = 'השעות הפנויות הן -';
+
 export const JOB_TYPES = [
   { text: 'תספורת + זקן', value: 'haircutBeard' },
   { text: 'תספורת', value: 'haircutOnly' },
