@@ -9,6 +9,7 @@ import {
   Login,
   Appointment,
   Verify,
+  Tors,
 } from './components/Pages';
 
 import './style/App.css';
@@ -28,6 +29,7 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/appointment' component={Appointment} />
           <Route path='/verify' component={Verify} />
+          <Route path='/Tors' component={Tors} />
         </Switch>
         <Footer />
       </div>

@@ -6,13 +6,19 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 
+import { useHistory } from 'react-router-dom';
+
 import { JOB_TYPES } from '../../../../config/Pages/appointmentPage/appointment';
 
 const getAppointmentButtonText = 'קבע תור';
 const cancelButtonText = 'בטל';
+const torApprovmentAlert = 'התור הוזמן';
 
 const FinalAppointmentDetails = (props) => {
+  const history = useHistory();
   const [jobType, setJobType] = React.useState('');
+
+  const alertMsg = ` ${torApprovmentAlert}`;
 
   const handleChange = (event) => {
     setJobType(event.target.value);
@@ -20,11 +26,9 @@ const FinalAppointmentDetails = (props) => {
 
   const submitTor = () => {
     if (jobType) {
-      console.log(
-        `
-        ${props.barberName} + ${props.chosenDay} + ${props.chosenHour} + ${jobType}
-        `
-      );
+      // add appointment
+      alert(alertMsg);
+      history.push('/');
     } else {
       alert('you have to choose a job type!');
     }

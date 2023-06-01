@@ -17,7 +17,8 @@ import {
   BUTTON_LABEL,
 } from '../../../config/Pages/loginPage/login';
 
-// import '../../../style/mainComponents/login.css';
+const sendMailAlert = 'הקוד נשלח במייל (:';
+const mailNotValid = 'המייל אינו תקין';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -26,10 +27,10 @@ const SignIn = () => {
 
   const sendEmail = (e) => {
     if (validator.isEmail(email)) {
-      alert('mail sent successfully! check your inbox :)');
+      alert(sendMailAlert);
       history.push('/verify');
     } else {
-      alert("mail isn't valid");
+      alert(mailNotValid);
     }
   };
 
