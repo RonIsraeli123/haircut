@@ -16,7 +16,7 @@ import {
   BUTTON_LABEL,
 } from '../../../config/Pages/verifyPage/verify';
 
-const SignIn = () => {
+const SignIn = (props) => {
   const [code, setCode] = useState('');
 
   const history = useHistory();
@@ -24,6 +24,7 @@ const SignIn = () => {
   const verifyCode = (e) => {
     if (code) {
       history.push('/appointment');
+      props.setIsLog(true);
     } else {
       alert("Code isn't valid");
     }

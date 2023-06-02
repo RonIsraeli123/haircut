@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { v4 as uuidv4 } from 'uuid';
+
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
@@ -13,6 +15,7 @@ import { JOB_TYPES } from '../../../../config/Pages/appointmentPage/appointment'
 const getAppointmentButtonText = 'קבע תור';
 const cancelButtonText = 'בטל';
 const torApprovmentAlert = 'התור הוזמן';
+const unvalidJobTypeAlertMsg = 'יש לבחור סוג תור';
 
 const FinalAppointmentDetails = (props) => {
   const history = useHistory();
@@ -26,11 +29,30 @@ const FinalAppointmentDetails = (props) => {
 
   const submitTor = () => {
     if (jobType) {
-      // add appointment
+      console.log([
+        ...props.userTors,
+        {
+          barberName: props.barberName,
+          day: props.chosenDay,
+          hour: props.chosenHour,
+          jobType: jobType,
+          id: uuidv4(),
+        },
+      ]);
+      props.setUserTors([
+        ...props.userTors,
+        {
+          barberName: props.barberName,
+          day: props.chosenDay,
+          hour: props.chosenHour,
+          jobType: jobType,
+          id: uuidv4(),
+        },
+      ]);
       alert(alertMsg);
-      history.push('/');
+      history.push('/tors');
     } else {
-      alert('you have to choose a job type!');
+      alert(unvalidJobTypeAlertMsg);
     }
   };
 

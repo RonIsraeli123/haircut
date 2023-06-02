@@ -8,6 +8,7 @@ export const HOME_NAV = 'בית';
 export const ABOUT_NAV = 'קצת עליי';
 export const WORK_NAV = ' עבודות ומחירים';
 export const APPOINTMENT_NAV = 'תורים';
+export const MAKE_APPOINTMENT_NAV = 'הזמנת תור';
 
 export const HOME_LOGO = <AiOutlineHome style={{ marginBottom: '2px' }} />;
 export const ABOUT_LOGO = <AiOutlineUser style={{ marginBottom: '2px' }} />;

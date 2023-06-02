@@ -14,9 +14,10 @@ import {
   ABOUT_LOGO,
   WORK_LOGO,
   APPOINTMENT_LOGO,
+  MAKE_APPOINTMENT_NAV,
 } from '../../config/general/navbar/navbar';
 
-function NavBar() {
+function NavBar(props) {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -78,15 +79,29 @@ function NavBar() {
                 {WORK_LOGO} {WORK_NAV}
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to='/login'
-                onClick={() => updateExpanded(false)}
-              >
-                {APPOINTMENT_LOGO} {APPOINTMENT_NAV}
-              </Nav.Link>
-            </Nav.Item>
+            {props.isLog ? (
+              <div>
+                <Nav.Item>
+                  <Nav.Link
+                    as={Link}
+                    to='/appointment'
+                    onClick={() => updateExpanded(false)}
+                  >
+                    {APPOINTMENT_LOGO} {MAKE_APPOINTMENT_NAV}
+                  </Nav.Link>
+                </Nav.Item>
+              </div>
+            ) : (
+              <Nav.Item>
+                <Nav.Link
+                  as={Link}
+                  to='/login'
+                  onClick={() => updateExpanded(false)}
+                >
+                  {APPOINTMENT_LOGO} {APPOINTMENT_NAV}
+                </Nav.Link>
+              </Nav.Item>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

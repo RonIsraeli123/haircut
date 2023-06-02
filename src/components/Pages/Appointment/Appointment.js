@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import FinalAppointmentDetails from './General/FinalAppointmentDetails';
 import ChooseBarber from './General/ChooseBarber';
 
-const Appointment = () => {
+const Appointment = (props) => {
   const [showFinalAppointment, setShowFinalAppointment] = useState(false);
   const [appointmentDetails, setAppointmentDetails] = React.useState({
     chosenDay: '',
@@ -24,6 +24,8 @@ const Appointment = () => {
             chosenDay={appointmentDetails['chosenDay']}
             chosenHour={appointmentDetails['chosenHour']}
             setShowFinalAppointment={setShowFinalAppointment}
+            userTors={props.userTors}
+            setUserTors={props.setUserTors}
           />
         ) : (
           <ChooseBarber
