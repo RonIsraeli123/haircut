@@ -968,3 +968,6 @@ max-width: 45em !important;
 .torChip{
   min-width: fit-content
 }
+.barberCardClass{
+  min-width: 3em;
+}

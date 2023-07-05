@@ -20,7 +20,7 @@ function BarberCard(props) {
   };
 
   return (
-    <div>
+    <div className='barberCardClass'>
       <Card
         className='barber-card-view'
         name={barberName}
