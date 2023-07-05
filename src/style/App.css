@@ -957,3 +957,14 @@ max-width: 45em !important;
   gap: 1em;
 }
 
+.torsItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  gap: 1em;
+}
+.torChip{
+  min-width: fit-content
+}

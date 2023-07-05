@@ -15,7 +15,7 @@ import { JOB_TYPES } from '../../../../config/Pages/appointmentPage/appointment'
 const getAppointmentButtonText = 'קבע תור';
 const cancelButtonText = 'בטל';
 const torApprovmentAlert = 'התור הוזמן';
-const unvalidJobTypeAlertMsg = 'יש לבחור סוג תור';
+const invalidJobTypeAlertMsg = 'יש לבחור סוג תור';
 
 const FinalAppointmentDetails = (props) => {
   const history = useHistory();
@@ -29,16 +29,6 @@ const FinalAppointmentDetails = (props) => {
 
   const submitTor = () => {
     if (jobType) {
-      console.log([
-        ...props.userTors,
-        {
-          barberName: props.barberName,
-          day: props.chosenDay,
-          hour: props.chosenHour,
-          jobType: jobType,
-          id: uuidv4(),
-        },
-      ]);
       props.setUserTors([
         ...props.userTors,
         {
@@ -52,7 +42,7 @@ const FinalAppointmentDetails = (props) => {
       alert(alertMsg);
       history.push('/tors');
     } else {
-      alert(unvalidJobTypeAlertMsg);
+      alert(invalidJobTypeAlertMsg);
     }
   };
 
