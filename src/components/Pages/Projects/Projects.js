@@ -11,7 +11,7 @@ function Projects() {
   return (
     <Container fluid className='project-section'>
       <Container>
-        <h1 className='project-heading'>{TITLE}</h1>
+        <h1 className='barber-option-heading'>{TITLE}</h1>
         <Row style={{ justifyContent: 'center', paddingBottom: '10px' }}>
           {PROJECTS.map((project, index) => (
             <Col md={4} className='project-card' key={index}>

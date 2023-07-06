@@ -924,6 +924,7 @@ max-width: 45em !important;
 }
 
 .barberAvailabilityHeader{
+  padding: 0.5em;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -970,4 +971,12 @@ max-width: 45em !important;
 }
 .barberCardClass{
   min-width: 3em;
+}
+
+.barber-option-heading {
+  color: #414141 !important;
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+  padding-bottom: 15px;
 }
