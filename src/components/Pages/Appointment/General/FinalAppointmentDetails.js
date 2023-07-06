@@ -52,11 +52,13 @@ const FinalAppointmentDetails = (props) => {
         {props.barberName} - {props.chosenDay} - {props.chosenHour}
       </p>
       <div className='jobTypeDetails'>
-        <FormControl className='jobTypeInput'>
-          <InputLabel id='demo-simple-select-label'>בחר טיפול</InputLabel>
+        <FormControl variant='filled' className='jobTypeInput'>
+          <InputLabel id='demo-simple-select-filled-label'>
+            בחר טיפול
+          </InputLabel>
           <Select
-            labelId='demo-simple-select-outlined-label'
-            id='demo-simple-select-outlined'
+            labelId='demo-simple-select-filled-label'
+            id='demo-simple-select-filled'
             value={jobType}
             onChange={handleChange}
           >
