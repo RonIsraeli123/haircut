@@ -16,6 +16,8 @@ import {
   BUTTON_LABEL,
 } from '../../../config/Pages/verifyPage/verify';
 
+const invalidCodeMsg = 'קוד לא תקין';
+
 const Verify = (props) => {
   const [code, setCode] = useState('');
 
@@ -26,7 +28,7 @@ const Verify = (props) => {
       history.push('/appointment');
       props.setIsLog(true);
     } else {
-      alert("Code isn't valid");
+      alert(invalidCodeMsg);
     }
   };
 
