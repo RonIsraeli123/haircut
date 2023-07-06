@@ -16,7 +16,7 @@ import {
   BUTTON_LABEL,
 } from '../../../config/Pages/verifyPage/verify';
 
-const SignIn = (props) => {
+const Verify = (props) => {
   const [code, setCode] = useState('');
 
   const history = useHistory();
@@ -76,4 +76,4 @@ const SignIn = (props) => {
   );
 };
 
-export default SignIn;
+export default Verify;
