@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { SocialMedia } from '../../General';
 import TypeWriter from './TypeWriter';
 
 import myImg from '../../../config/Assets/home.jpg';
