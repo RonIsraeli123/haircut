@@ -55,7 +55,6 @@ function Home() {
               <h1>{CONTACT_HEADER}</h1>
               <p> {CONTACT_PARAGRAPH}</p>
               <p>({CONTACT_NOTE})</p>
-              <SocialMedia />
             </Col>
           </Row>
         </Container>
